@@ -1,0 +1,38 @@
+[project]
+name = "votecatcher"
+version = "0.0.1"
+description = "A python package for verifying ballot petition signatures"
+readme = "README.md"
+requires-python = "~=3.12"
+authors = [{ name = "Mobolaji Williams" }]
+maintainers = [
+    { name = "Mobolaji Williams" },
+    { name = "Andrew Shao" },
+    { name = "Kurian Vithayathil" },
+    { name = "Eugene Kim" },
+]
+license = "MIT"
+dependencies = [
+    "fastapi[standard]",
+    "uvicorn",
+    "piccolo[sqlite]",
+    "piccolo_admin",
+    "python-jose",
+    "pydantic-settings"
+]
+
+[tool.ruff]
+line-length = 79
+lint.select = ["F", "E", "W", "I"]
+
+[tool.black]
+line-length = 79
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.coverage.run]
+omit = [
+    "**/piccolo_migrations/*",
+    "**/piccolo_app.py",
+]
