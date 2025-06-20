@@ -21,7 +21,7 @@ uv sync --all-extras --dev
 # On Windows:
 venv\Scripts\activate
 # On macOS/Linux:
-source venv/bin/activate
+source .venv/bin/activate
 
 ```
 
